@@ -32,7 +32,7 @@ public class QueueAModel {
         Logger logger = LoggerFactory.getLogger(QueueAModel.class);
         String QUEUE_NAME = "queueA";
         ConnectionFactory factory = new ConnectionFactory();
-        factory.setUsername("wgrkxzlx:wgrkxzlx");
+        factory.setUsername("wgrkxzlx");
         factory.setPort(1883);
         factory.setPassword("3Z_cKVg7KkVFJjo88UKcuIWDNTuDcBR0");
         factory.setHost("toad.rmq.cloudamqp.com");
