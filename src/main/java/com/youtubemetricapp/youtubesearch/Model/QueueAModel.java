@@ -9,7 +9,6 @@ import com.youtubemetricapp.youtubesearch.Model.classes.YtInfo;
 import org.json.JSONException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.scheduling.annotation.Async;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -33,7 +32,7 @@ public class QueueAModel {
         Logger logger = LoggerFactory.getLogger(QueueAModel.class);
         String QUEUE_NAME = "queueA";
         ConnectionFactory factory = new ConnectionFactory();
-        factory.setHost("cgiyoutubesearch.herokuapp.com");
+        factory.setHost("localhost");
         Connection connection = factory.newConnection();
         Channel channel = connection.createChannel();
         channel.queueDeclare(QUEUE_NAME,false,false,false,null);

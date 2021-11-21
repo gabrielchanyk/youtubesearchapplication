@@ -5,8 +5,7 @@ import com.youtubemetricapp.youtubesearch.Controller.QueueBController;
 import org.json.JSONException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.scheduling.annotation.Async;
-import org.springframework.web.bind.annotation.GetMapping;
+
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -27,7 +26,7 @@ public class QueueBModel {
         String QUEUE_NAME = "queueA";
 
         ConnectionFactory factory = new ConnectionFactory();
-        factory.setHost("cgiyoutubesearch.herokuapp.com");
+        factory.setHost("localhost");
         Connection connection = factory.newConnection();
         Channel channel = connection.createChannel();
         channel.queueDeclare(QUEUE_NAME,
