@@ -26,8 +26,7 @@ public class QueueBModel {
         String QUEUE_NAME = "queueA";
 
         ConnectionFactory factory = new ConnectionFactory();
-        factory.setPort(80);
-        factory.setHost("https://cgiyoutubesearch.herokuapp.com/");
+        factory.setHost("cgiyoutubesearch.herokuapp.com");
         Connection connection = factory.newConnection();
         Channel channel = connection.createChannel();
         channel.queueDeclare(QUEUE_NAME,
