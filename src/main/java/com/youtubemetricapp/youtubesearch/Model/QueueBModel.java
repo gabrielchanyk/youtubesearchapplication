@@ -2,6 +2,8 @@ package com.youtubemetricapp.youtubesearch.Model;
 
 import com.rabbitmq.client.*;
 import com.youtubemetricapp.youtubesearch.Controller.QueueBController;
+import com.youtubemetricapp.youtubesearch.Model.classes.ConnectionInfo;
+import com.youtubemetricapp.youtubesearch.Model.classes.Credentials;
 import org.json.JSONException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,17 +28,14 @@ public class QueueBModel {
         String QUEUE_NAME = "queueA";
 
         ConnectionFactory factory = new ConnectionFactory();
-//used for heroku
-        //        factory.setUsername("wgrkxzlx");
-//        factory.setPort(1883);
-//        factory.setPassword("3Z_cKVg7KkVFJjo88UKcuIWDNTuDcBR0");
-//        factory.setHost("toad.rmq.cloudamqp.com");
-        factory.setHost("localhost");
+//        factory.setUsername(Credentials.connUser);
+//        factory.setPassword(Credentials.connPw);
+        factory.setHost(ConnectionInfo.hostname);
+//        factory.setPort(ConnectionInfo.port);
         Connection connection = factory.newConnection();
         Channel channel = connection.createChannel();
         channel.queueDeclare(QUEUE_NAME,
                 false, false,false, null);
-//        listQ2.clear();
         Consumer consumer = new DefaultConsumer(channel){
             @Override
             public void handleDelivery(String consumerTag,

@@ -5,6 +5,8 @@ import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
+import com.youtubemetricapp.youtubesearch.Model.classes.ConnectionInfo;
+import com.youtubemetricapp.youtubesearch.Model.classes.Credentials;
 import com.youtubemetricapp.youtubesearch.Model.classes.YtInfo;
 import org.json.JSONException;
 import org.slf4j.Logger;
@@ -24,20 +26,19 @@ import java.util.concurrent.TimeoutException;
 
 public class QueueAModel {
 
+    static String query = "telecom";
     //static method needed to send all messages into Queue A
     static public List<String> getQueueA() throws JSONException, IOException, TimeoutException {
 
         List<String> ytQ1 = new ArrayList<>();
-        List<Map<String,Object>> rawYt = YtApiService.getrawyt("AIzaSyApCoSCJ9Uvnfksl7RSiFHzgwoE7Nr7aYA","telecom");
+        List<Map<String,Object>> rawYt = YtApiService.getrawyt(Credentials.apikey,query);
         Logger logger = LoggerFactory.getLogger(QueueAModel.class);
         String QUEUE_NAME = "queueA";
         ConnectionFactory factory = new ConnectionFactory();
-//used for heroku
-        //        factory.setUsername("wgrkxzlx");
-//        factory.setPort(1883);
-//        factory.setPassword("3Z_cKVg7KkVFJjo88UKcuIWDNTuDcBR0");
-//        factory.setHost("toad.rmq.cloudamqp.com");
-        factory.setHost("localhost");
+//        factory.setUsername(Credentials.connUser);
+//        factory.setPassword(Credentials.connPw);
+        factory.setHost(ConnectionInfo.hostname);
+//        factory.setPort(ConnectionInfo.port);
         Connection connection = factory.newConnection();
         Channel channel = connection.createChannel();
         channel.queueDeclare(QUEUE_NAME,false,false,false,null);
