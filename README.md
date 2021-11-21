@@ -19,8 +19,7 @@
 - 
 
 # Schema describing the messages produced
-ge
-ge
+
 
 #How to compile the code
 This is a Java Springboot application and the main function is in the class [YoutubesearchApplication.java](src/main/java/com/youtubemetricapp/youtubesearch/YoutubesearchApplication.java)
