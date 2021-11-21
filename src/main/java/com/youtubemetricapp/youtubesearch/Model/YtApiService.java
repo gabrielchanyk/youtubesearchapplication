@@ -23,7 +23,7 @@ public class YtApiService {
         Map<String, Object> searchObjs = new ObjectMapper().readValue(ytData, typeRef);
         Map<String, String> searchpageInfo = new ObjectMapper().convertValue(searchObjs.get("pageInfo"), Map.class);
         //used to get all the results of "telecom" from api however seems that max results is 50
-        url = String.format("https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=telecom&maxResults=%s&key=%s", searchpageInfo.get("totalResults"),key);
+        url = String.format("https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=%s&maxResults=%s&key=%s", query,searchpageInfo.get("totalResults"),key);
         ytData = restTemplate.getForObject(url, String.class);
         searchObjs = new ObjectMapper().readValue(ytData, typeRef);
         List<Map<String, Object>> listsearchObjs = new ObjectMapper().convertValue(searchObjs.get("items"), List.class);

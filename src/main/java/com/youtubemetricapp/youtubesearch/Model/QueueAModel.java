@@ -29,7 +29,7 @@ public class QueueAModel {
     static public List<String> getQueueA() throws JSONException, IOException, TimeoutException {
 
         List<String> ytQ1 = new ArrayList<>();
-        List<Map<String,Object>> rawYt = YtApiService.getrawyt("AIzaSyDy6koftMNzenIOsbX56m9x8u6YroPC0jw","telecom");
+        List<Map<String,Object>> rawYt = YtApiService.getrawyt("AIzaSyApCoSCJ9Uvnfksl7RSiFHzgwoE7Nr7aYA","telecom");
         Logger logger = LoggerFactory.getLogger(QueueAModel.class);
         String QUEUE_NAME = "queueA";
         ConnectionFactory factory = new ConnectionFactory();
