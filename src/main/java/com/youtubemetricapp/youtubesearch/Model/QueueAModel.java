@@ -33,7 +33,7 @@ public class QueueAModel {
         Logger logger = LoggerFactory.getLogger(QueueAModel.class);
         String QUEUE_NAME = "queueA";
         ConnectionFactory factory = new ConnectionFactory();
-        factory.setHost("youtubesearchcgi.herokuapp.com");
+        factory.setHost("cgiyoutubesearch.herokuapp.com");
         Connection connection = factory.newConnection();
         Channel channel = connection.createChannel();
         channel.queueDeclare(QUEUE_NAME,false,false,false,null);
