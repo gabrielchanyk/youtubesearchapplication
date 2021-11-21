@@ -20,7 +20,7 @@ public class QueueBController {
 
     @GetMapping(value = "/queueB")
     public List<String> getQueueB() throws JSONException, IOException, TimeoutException {
-//        QueueAModel.getQueueA();
+        QueueAModel.getQueueA();
         return QueueBModel.getQueueB();
     }
 }
