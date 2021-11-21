@@ -28,7 +28,7 @@ public class QueueBModel {
         ConnectionFactory factory = new ConnectionFactory();
         factory.setUsername("wgrkxzlx");
         factory.setPassword("3Z_cKVg7KkVFJjo88UKcuIWDNTuDcBR0");
-        factory.setHost("cgiyoutubesearch.herokuapp.com");
+        factory.setHost("toad.rmq.cloudamqp.com");
         Connection connection = factory.newConnection();
         Channel channel = connection.createChannel();
         channel.queueDeclare(QUEUE_NAME,
