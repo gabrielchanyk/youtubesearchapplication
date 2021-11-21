@@ -26,7 +26,8 @@ public class QueueBModel {
         String QUEUE_NAME = "queueA";
 
         ConnectionFactory factory = new ConnectionFactory();
-        factory.setUsername("wgrkxzlx");
+        factory.setUsername("wgrkxzlx:wgrkxzlx");
+        factory.setPort(1883);
         factory.setPassword("3Z_cKVg7KkVFJjo88UKcuIWDNTuDcBR0");
         factory.setHost("toad.rmq.cloudamqp.com");
         Connection connection = factory.newConnection();
