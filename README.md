@@ -103,15 +103,15 @@ https://github.com/gabrielchanyk/youtubesearchapplication
 
 
 # 12. Links that helped with project
-https://start.spring.io/
-https://www.youtube.com/watch?v=9SGDpanrc8U
-https://springframework.guru/gang-of-four-design-patterns/
-https://www.youtube.com/watch?v=zbp_6yWZrIQ
-https://www.youtube.com/watch?v=gN5EVIoV0O8
-https://www.youtube.com/watch?v=C_6uQwBjsmk
-https://stackabuse.com/build-a-spring-boot-rest-api-with-java-full-guide/
-https://github.com/youtube/api-samples/blob/master/java/pom.xml
-https://stackoverflow.com/questions/13264055/how-can-i-use-textmessage-to-send-an-xml-file-to-the-jms-queue
-https://www.youtube.com/watch?v=qcfEChxM7Mk
-https://dzone.com/articles/using-jms-in-spring-boot-1
+https://start.spring.io/ </br>
+https://www.youtube.com/watch?v=9SGDpanrc8U </br>
+https://springframework.guru/gang-of-four-design-patterns/ </br>
+https://www.youtube.com/watch?v=zbp_6yWZrIQ </br>
+https://www.youtube.com/watch?v=gN5EVIoV0O8 </br>
+https://www.youtube.com/watch?v=C_6uQwBjsmk </br>
+https://stackabuse.com/build-a-spring-boot-rest-api-with-java-full-guide/ </br>
+https://github.com/youtube/api-samples/blob/master/java/pom.xml </br>
+https://stackoverflow.com/questions/13264055/how-can-i-use-textmessage-to-send-an-xml-file-to-the-jms-queue </br>
+https://www.youtube.com/watch?v=qcfEChxM7Mk </br>
+https://dzone.com/articles/using-jms-in-spring-boot-1 </br>
 https://spring.io/guides/gs/consuming-rest/
