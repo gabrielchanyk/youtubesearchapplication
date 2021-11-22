@@ -1,4 +1,6 @@
 # Youtube Metric Search Java REST API
+By: Gabriel Chan </br>
+Date: 11/21/2021
 
 # Table of Contents
 1. [About the Project](#1-about-the-project)
