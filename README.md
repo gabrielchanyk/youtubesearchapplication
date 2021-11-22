@@ -1,6 +1,6 @@
-#Youtube Metric Search Java REST API
+# Youtube Metric Search Java REST API
 
-#Table of Contents
+# Table of Contents
 1. [About the Project](#1-about-the-project)
 2. [Prerequisites](#2-prerequisites)
 3. [Quick Start](#3-quick-start)
