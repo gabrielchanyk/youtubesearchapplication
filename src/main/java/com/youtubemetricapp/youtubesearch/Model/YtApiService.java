@@ -14,6 +14,7 @@ public class YtApiService {
 
     private YtApiService () {}
 
+    //function to get raw data from youtube api and store into a list of hashmap
     static public List<Map<String,Object>> getrawyt(String key, String query) throws JSONException, JsonProcessingException {
         var mapper = new ObjectMapper();
         String url = String.format("https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=%s&key=%s",query, key);

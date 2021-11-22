@@ -13,6 +13,7 @@ import java.util.concurrent.TimeoutException;
 public class QueueAController {
 
 
+    //queue A rest API page with XML messages saved onto JMS Queue A
     @GetMapping(value = "/queueA")
     public List<String> getQueueA() throws JSONException, IOException, TimeoutException {
         return QueueAModel.getQueueA();
