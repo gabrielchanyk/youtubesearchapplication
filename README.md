@@ -27,10 +27,13 @@ This is a REST API project and the links at the under [here](#3-quick-start) wil
 
 # 2. Prerequisites
 - Install RabbitMQ: middleware used for JMS Queues(can look up guide [here](https://spring.io/guides/gs/messaging-rabbitmq/))
+- Start RabbitMQ Server usually found in sbin of where you installed RabbitMQ it will be simlar to this: C:\Program Files\RabbitMQ Server\rabbitmq_server-3.9.10\sbin
+- Server bat file: rabbitmq-server.bat
 
 # 3. Quick Start
 - run command ```java -jar youtubesearch-0.0.1-SNAPSHOT.jar``` in [target folder](target/youtubesearch-0.0.1-SNAPSHOT.jar)
 - open up [localhost:8080/queueB](http://localhost:8080/queueB) for full solution
+- view JMS queues on [RabbitMQ](http://localhost:15672/)
 
 ## 3.1 Additional Features
 - [localhost:8080/callrawyt](http://localhost:8080/callrawyt) shows raw information for keyword "telecom" retrieved from Youtube API
