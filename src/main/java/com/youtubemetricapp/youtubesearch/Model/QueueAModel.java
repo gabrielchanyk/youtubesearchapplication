@@ -40,8 +40,6 @@ public class QueueAModel {
         Logger logger = LoggerFactory.getLogger(QueueAModel.class);
         String QUEUE_NAME = "queueA";
         ConnectionFactory factory = new ConnectionFactory();
-//        factory.setUsername(Credentials.connUser);
-//        factory.setPassword(Credentials.connPw);
 //        factory.setHost(ConnectionInfo.hostname);
 //        factory.setPort(ConnectionInfo.port);
         factory.setUri(ConnectionInfo.uri);
