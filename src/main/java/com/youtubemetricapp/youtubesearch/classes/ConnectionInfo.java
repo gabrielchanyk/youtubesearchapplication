@@ -9,4 +9,5 @@ public class ConnectionInfo {
 //    static public int port = 1883;
     static public String hostname = "localhost";
     static public int port = 8080;
+    static public String uri = "amqps://wgrkxzlx:3Z_cKVg7KkVFJjo88UKcuIWDNTuDcBR0@toad.rmq.cloudamqp.com/wgrkxzlx";
 }
