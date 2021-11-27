@@ -39,7 +39,13 @@ This is a REST API project and the links at the under [here](#3-quick-start) wil
 - [localhost:8080/callrawyt](http://localhost:8080/callrawyt) shows raw information for keyword "telecom" retrieved from Youtube API
 - [localhost:8080/queueA](http://localhost:8080/queueA) shows output that goes into Queue A and also sends output to JMS Queue A
 
-# 4. Design Patterns Used
+# 4. Heroku Server Deployment
+- https://cgiyoutubesearch.herokuapp.com/callrawyt shows raw information for keyword "telecom"
+- https://cgiyoutubesearch.herokuapp.com/queueA shows output that goes into Queue A and also sends output to JMS Queue A
+- https://cgiyoutubesearch.herokuapp.com/queueB for full solution
+- Local host links on [Quick-start](#3-quick-start)
+
+# 5. Design Patterns Used
 - Model-view-controller (MVC) was used in this implementation,
   - Model classes:
     - [QueueAModel.java](src/main/java/com/youtubemetricapp/youtubesearch/Model/QueueAModel.java)
@@ -63,18 +69,18 @@ This is a REST API project and the links at the under [here](#3-quick-start) wil
     - This is not part of the repository because it contains secret keys for api calls and username and password for RabbitMQ however this is also a singleton class because this should not be altered by the program
 
 
-# 5. Schema Describing Messages Produced
+# 6. Schema Describing Messages Produced
 As Described above, this program collects information of videos with "telecom" the titles from the Youtube Metric API and then uses information of the title and url of those videos converted into an XML message and sent into QueueA.
 Queue A is then consumed and the title are of the videos are altered from "telcom" to "telco" and sent as XML messages to QueueB.
 
-# 6. How to compile the source code produced
+# 7. How to compile the source code produced
 This is a Java Springboot application and the main function is in the class [YoutubesearchApplication.java](src/main/java/com/youtubemetricapp/youtubesearch/YoutubesearchApplication.java)
 As it is compiling, Marven dependencies must be installed as seen in the [pom.xml](pom.xml).
 Using IntelliJ, Eclipse or any other complier, you can open up the folder "youtubesearch" and run the program.
 This could also be easily done using the steps in [Quick Start](#3-quick-start).
 This links can also be found [here](#3-quick-start) and [here](#31-additional-features).
 
-# 7. What could be done differently
+# 8. What could be done differently
 - Design Patterns: This could be better in terms of design patterns. I felt that I did not have enough time to full grasp all 24 design patterns of the Gang of 4.
 - Deployment: I spent a lot of time trying to get RabbitMQ to work with heroku upon deployment but still could not get it to work.
 - Multiple REST API pages: If I did not want to showcase the results of the information retrieved from youtube and the Queues, I would only use QueueB as the REST API page.
@@ -82,13 +88,7 @@ This links can also be found [here](#3-quick-start) and [here](#31-additional-fe
 - Better String replacement logic: If given more time I would use a better regex expression to also capture accents that contain "telecom"
 - Better Exception Handling: Did not spend too much time searching on how to do proper exception handling but tried my best
 </br></br>
-Overall I believe that I did the best I could do with my experience and time spent. I spent a lot of time trying to plan and learn design patterns and could have possibly spent more time in some aspects to get a better replacement string methods in place. 
-
-# 8. Heroku Server Deployment
-- https://cgiyoutubesearch.herokuapp.com/callrawyt
-- https://cgiyoutubesearch.herokuapp.com/queueA
-- https://cgiyoutubesearch.herokuapp.com/queueB
-- Information on what it does in [Additional Features](#31-additional-features)
+Overall I believe that I did the best I could do with my experience and time spent. I spent a lot of time trying to plan and learn design patterns and could have possibly spent more time in some aspects to get a better replacement string methods in place.
 
 # 9. Link to Git Repository
 https://github.com/gabrielchanyk/youtubesearchapplication
@@ -105,7 +105,6 @@ https://github.com/gabrielchanyk/youtubesearchapplication
 - how to use JMS queues with RabbitMQ middleware
 - how to convert json to maps and maps to xml
 - how to deploy to heroku
-
 
 # 12. Links that helped with project
 https://start.spring.io/ </br>
