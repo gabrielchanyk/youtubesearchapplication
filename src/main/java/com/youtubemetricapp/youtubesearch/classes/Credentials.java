@@ -4,7 +4,7 @@ package com.youtubemetricapp.youtubesearch.classes;
 public class Credentials {
     private Credentials() {}
 
-    static public String apikey ="AIzaSyAvy1hDyi3AWLmpKeB7_3s5tqhpvLWySCU";
+    static public String apikey ="AIzaSyBtamVgzGaszuuLGlDa0LpcPv7QLey_1Mw";
 //    static public String connUser = "guest";
 //    static public String connPw = "guest";
     //heroku username and pw
