@@ -8,6 +8,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
+import java.net.URISyntaxException;
+import java.security.KeyManagementException;
+import java.security.NoSuchAlgorithmException;
 import java.util.List;
 import java.util.concurrent.TimeoutException;
 
@@ -17,7 +20,7 @@ public class QueueBController {
 
     //queue B rest API page with XML messages saved onto JMS Queue B
     @GetMapping(value = "/queueB")
-    public List<String> getQueueB() throws JSONException, IOException, TimeoutException {
+    public List<String> getQueueB() throws JSONException, IOException, TimeoutException, URISyntaxException, NoSuchAlgorithmException, KeyManagementException {
         QueueAModel.getQueueA();
         return QueueBModel.getQueueB();
     }

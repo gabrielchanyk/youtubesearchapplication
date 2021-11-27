@@ -9,7 +9,10 @@ import org.slf4j.LoggerFactory;
 
 
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.nio.charset.StandardCharsets;
+import java.security.KeyManagementException;
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeoutException;
@@ -23,15 +26,13 @@ public class QueueBModel {
         listQ2.clear();
     }
     //static method needed to send all messages into Queue B
-    static public List<String> getQueueB() throws JSONException, IOException, TimeoutException {
+    static public List<String> getQueueB() throws JSONException, IOException, TimeoutException, URISyntaxException, NoSuchAlgorithmException, KeyManagementException {
         Logger logger = LoggerFactory.getLogger(QueueBController.class);
         //consume Queue A
         String QUEUE_NAME = "queueA";
         ConnectionFactory factory = new ConnectionFactory();
-//        factory.setUsername(Credentials.connUser);
-//        factory.setPassword(Credentials.connPw);
-        factory.setHost(ConnectionInfo.hostname);
-//        factory.setPort(ConnectionInfo.port);
+//        factory.setHost(ConnectionInfo.hostname);
+        factory.setUri(ConnectionInfo.uri);
         Connection connection = factory.newConnection();
         Channel channel = connection.createChannel();
         channel.queueDeclare(QUEUE_NAME,
