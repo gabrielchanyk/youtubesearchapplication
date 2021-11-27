@@ -85,9 +85,9 @@ This links can also be found [here](#3-quick-start) and [here](#31-additional-fe
 Overall I believe that I did the best I could do with my experience and time spent. I spent a lot of time trying to plan and learn design patterns and could have possibly spent more time in some aspects to get a better replacement string methods in place. 
 
 # 8. Heroku Server Deployment
-- https://cgiyoutubesearch.herokuapp.com/callrawyt : this is working
-- https://cgiyoutubesearch.herokuapp.com/queueA : Message queue does not work so this give a timeout error.
-- https://cgiyoutubesearch.herokuapp.com/queueB : Message queue does not work so this give a timeout error.
+- https://cgiyoutubesearch.herokuapp.com/callrawyt
+- https://cgiyoutubesearch.herokuapp.com/queueA
+- https://cgiyoutubesearch.herokuapp.com/queueB
 - Information on what it does in [Additional Features](#31-additional-features)
 
 # 9. Link to Git Repository
